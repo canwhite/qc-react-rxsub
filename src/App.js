@@ -5,9 +5,7 @@ import React from "react";
 import { subscription, dispatch } from "rxsub"
 import { count$,async_res$ } from "./store";
 
-//sunscription()返回一个函数，这个函数的参数是一整个函数组件
-//最终也会把这个函数组件返回，方便直接使用
-
+//sunscription接受observable返回一个HOC，这个HOC接受一个组件并返回
 const Cou = subscription({
     count: count$//主要是value，key可以随意命名
   })((props) =>{
