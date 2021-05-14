@@ -1,6 +1,7 @@
 
 import React from "react";
 //subscription这个是订阅，dispatch主要是为了走subject的next
+//需要在哪个组件中使用，就在哪个组件中订阅
 import { subscription, dispatch } from "rxsub"
 import { count$,async_res$ } from "./store";
 
